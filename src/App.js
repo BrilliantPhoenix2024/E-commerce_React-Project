@@ -17,8 +17,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Shop />} />
-        <Route path="/product" element={<Product />} />
-        <Route path=":productId" element={<Product />} />
+        <Route path="/product" element={<Product />}>
+          <Route path=":productId" element={<Product />} />
+        </Route>
         <Route path="/login" element={<LoginSignUp />} />
         <Route path="/cart" element={<Cart />} />
         <Route

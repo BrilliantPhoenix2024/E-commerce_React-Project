@@ -3,8 +3,19 @@
   margin: 0;
 }
 
+/* Ensure the body takes up full height */
+html,
 body {
+  height: 100%;
+  margin: 0;
   font-family: system-ui;
+}
+
+/* Main container to use flexbox */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
 }
 
 a {

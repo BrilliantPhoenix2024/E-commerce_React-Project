@@ -13,13 +13,13 @@ import kid_banner from "./Components/Assets/banner_kids.png";
 
 function App() {
   return (
-    <>
+    <div className="main-container">
+      {/* Main container for flexbox */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Shop />} />
-        <Route path="/product" element={<Product />}>
-          <Route path=":productId" element={<Product />} />
-        </Route>
+        <Route path="/product/:productId" element={<Product />} />
+        {/* Adjusted to handle productId directly */}
         <Route path="/login" element={<LoginSignUp />} />
         <Route path="/cart" element={<Cart />} />
         <Route
@@ -36,7 +36,8 @@ function App() {
         />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
+
 export default App;

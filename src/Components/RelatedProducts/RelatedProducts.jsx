@@ -8,7 +8,7 @@ const RelatedProducts = () => {
     <div className="relatedproducts">
       <h1>Related Products</h1>
       <hr />
-      <div className="relatedpriducts-item">
+      <div className="relatedproducts-item">
         {data_product.map((item, i) => {
           return (
             <Item

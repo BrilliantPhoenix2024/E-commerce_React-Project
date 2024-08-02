@@ -7,13 +7,13 @@ import NewsLetter from "../Components/NewsLetter/NewsLetter";
 
 const Shop = () => {
   return (
-    <div>
+    <React.Fragment>
       <Hero />
       <Popular />
       <Offers />
       <NewCollections />
       <NewsLetter />
-    </div>
+    </React.Fragment>
   );
 };
 

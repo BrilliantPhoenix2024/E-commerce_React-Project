@@ -5,13 +5,17 @@ import dropdown_icon from "../Components/Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
 
 const ShopCategory = (props) => {
-  const { all_product } = useContext(ShopContext);
+  const context = useContext(ShopContext);
+
+  // Check if context is defined and destructure safely
+  const all_product = context ? context.all_product : [];
+
   return (
     <div className="shop-category">
       <img className="shopcategory-banner" src={props.banner} alt="" />
       <div className="shopcategory-indexsort">
         <p>
-          <span>Showing 1-12</span> out of 36 products.
+          <span>Showing 1-12</span> out of {all_product.length} products.
         </p>
         <div className="shopcategory-sort">
           Sort by <img src={dropdown_icon} alt="" />
@@ -23,7 +27,7 @@ const ShopCategory = (props) => {
           if (props.category === item.category) {
             return (
               <Item
-                key={i}
+                key={item.id} // Use item.id instead of index for better performance
                 id={item.id}
                 name={item.name}
                 image={item.image}
@@ -36,9 +40,7 @@ const ShopCategory = (props) => {
           }
         })}
       </div>
-      <div className="shopcategory-loadmore">
-        Explore more
-      </div>
+      <div className="shopcategory-loadmore">Explore more</div>
     </div>
   );
 };

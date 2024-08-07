@@ -19,16 +19,16 @@ const Navbar = () => {
       </Link>
 
       <ul className="nav-menu">
-        <li className="nav-menu" onClick={() => setMenu("shop")}>
+        <li className="nav-menu-item" onClick={() => setMenu("shop")}>
           <Link to="/">SHOP {menu === "shop" ? <hr /> : null}</Link>
         </li>
-        <li className="nav-menu" onClick={() => setMenu("mens")}>
+        <li className="nav-menu-item" onClick={() => setMenu("mens")}>
           <Link to="/mens">MEN {menu === "mens" ? <hr /> : null}</Link>
         </li>
-        <li className="nav-menu" onClick={() => setMenu("womens")}>
+        <li className="nav-menu-item" onClick={() => setMenu("womens")}>
           <Link to="/womens">WOMEN {menu === "womens" ? <hr /> : null}</Link>
         </li>
-        <li className="nav-menu" onClick={() => setMenu("kids")}>
+        <li className="nav-menu-item" onClick={() => setMenu("kids")}>
           <Link to="/kids">KIDS {menu === "kids" ? <hr /> : null}</Link>
         </li>
       </ul>

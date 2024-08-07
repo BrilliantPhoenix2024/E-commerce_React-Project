@@ -3,13 +3,20 @@
   border: 1px black;
   justify-content: space-around;
   padding: 16px;
-  box-shadow: 0 1px 3px -2px black;
+  align-items: center;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.nav-logo img {
+  height: 40px; /* Adjust based on your logo size */
+  margin-right: 10px; /* Space between logo and text */
 }
 
 .nav-logo p {
@@ -28,13 +35,14 @@
   font-weight: 500;
 }
 
-.nav-menu li {
+.nav-menu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3px;
   cursor: pointer;
+  margin: 0 15px;
 }
 
 .nav-menu hr {
@@ -63,6 +71,7 @@
   font-size: 20px;
   font-weight: 500;
   background: white;
+  margin-right: 20px; /* Space between button and cart icon */
 }
 
 .nav-login-card button:active {
@@ -77,8 +86,10 @@
   justify-content: center;
   margin-top: -35px;
   margin-left: -55px;
-  border-radius: 11px;
   font-size: 14px;
-  color: white;
-  background: red;
+  background-color: red; /* Color for the count badge */
+  color: white; /* Text color */
+  border-radius: 50%;
+  padding: 5px 10px; /* Padding around the count */
+  position: relative; /* Positioning for better placement */
 }
